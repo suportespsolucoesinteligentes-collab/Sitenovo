@@ -1,0 +1,250 @@
+/* Documentação: Reset básico para garantir que o estilo seja consistente em todos os navegadores. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de Cores: Definimos as cores para fácil alteração futura. */
+:root {
+    --color-dark: #121212; /* Fundo principal escuro */
+    --color-light: #f4f4f4; /* Cor do texto claro */
+    --color-accent: #00ffff; /* Ciano/Azul brilhante para o toque tecnológico */
+    --color-secondary: #333333; /* Fundo de seção escura */
+}
+
+/* Estilo do Corpo (Body): Aplica a fonte Poppins e o fundo escuro. */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    line-height: 1.6;
+}
+
+/* Layout: Container centraliza o conteúdo e define a largura máxima. */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Configurações de Seções */
+.section-padding {
+    padding: 80px 0;
+}
+.dark-bg {
+    background-color: var(--color-secondary);
+}
+.section-subtitle {
+    font-size: 1.1em;
+    color: #aaaaaa;
+    margin-bottom: 40px;
+}
+
+/* LINKS: Todos os links (incluindo menu e botões) */
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--color-accent); /* Efeito ao passar o mouse */
+}
+
+/* =================================
+   ESTILO DO CABEÇALHO (HEADER) E NAVEGAÇÃO
+   ================================= */
+header {
+    background: rgba(18, 18, 18, 0.9); /* Fundo semi-transparente */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-accent); /* Logo com a cor de destaque */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-left: 30px;
+}
+
+.nav-menu ul li a {
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+/* Menu Toggle (Botão do menu para telemóveis) - Escondido por padrão no desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* =================================
+   SEÇÃO HERO (DESTAQUE)
+   ================================= */
+.hero-section {
+    padding: 150px 0;
+    text-align: center;
+    background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('placeholder-bg.jpg') no-repeat center center/cover;
+    /* DICA: Troque 'placeholder-bg.jpg' por uma imagem de fundo moderna e escura! */
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: var(--color-light);
+}
+
+/* Botão de Destaque */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #00e6e6; /* Um pouco mais claro */
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/* =================================
+   SEÇÃO SERVIÇOS
+   ================================= */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo com 3 colunas */
+    gap: 30px;
+    text-align: center;
+}
+
+.servico-card {
+    background-color: var(--color-secondary);
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 3px solid var(--color-accent); /* Detalhe moderno na borda */
+    transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px); /* Efeito de destaque ao passar o mouse */
+}
+
+.servico-card h3 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+/* =================================
+   SEÇÃO DE CONTATO
+   ================================= */
+.contato-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    text-align: center;
+}
+
+.info-item h3 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.info-item a {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* =================================
+   RODAPÉ (FOOTER)
+   ================================= */
+footer {
+    background-color: var(--color-dark);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--color-secondary);
+    font-size: 0.9em;
+    color: #888888;
+}
+
+/* =================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ================================= */
+/* Documentação: Este bloco garante que o site funcione bem em telemóveis e tablets. */
+@media (max-width: 768px) {
+    
+    /* Configura o menu para mobile */
+    .nav-menu {
+        position: absolute;
+        top: 65px; /* Altura do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-secondary);
+        border-top: 1px solid var(--color-accent);
+        display: none; /* Escondido por padrão, JavaScript irá mostrar */
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: block; /* O JavaScript adiciona a classe 'active' */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 15px 0;
+    }
+
+    /* Mostra o botão do menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-section {
+        padding: 100px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    /* Reduz o padding das seções */
+    .section-padding {
+        padding: 50px 0;
+    }
+}
