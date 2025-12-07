@@ -1,37 +1,22 @@
-// Documentação: Função para lidar com a rolagem suave ao clicar nos links de navegação.
-document.addEventListener('DOMContentLoaded', function() {
+// Aguarda o documento carregar
+document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Funcionalidade do Menu Mobile (Responsividade)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // Seleciona os elementos do menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
 
-    // Ao clicar no botão, alterna a classe 'active' no menu
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+    // Quando clicar no hambúrguer, abre/fecha o menu
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
 
-    // 2. Fechar o menu ao clicar em um link (útil para mobile)
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove a classe 'active', fechando o menu (se estiver aberto)
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // 3. Implementação da Rolagem Suave (Smooth Scroll)
-    // Seleciona todos os links que começam com '#' (links internos)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Impede o comportamento de salto padrão
-            
-            // Pega o destino (o ID da seção, ex: #servicos)
-            const targetId = this.getAttribute('href');
-            
-            // Usa o método 'scrollIntoView' para uma rolagem elegante
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
+    // Fecha o menu automaticamente quando clicar em um link (melhora a experiência no mobile)
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
         });
     });
 });
