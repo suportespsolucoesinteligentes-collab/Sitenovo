@@ -1,86 +1,127 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP Soluções Inteligentes - Automação Residencial e Alarmes</title>
+    <title>SP Soluções Inteligentes - Automação Residencial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">SP Soluções Inteligentes</a>
-            
-            <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
-
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#hero">Início</a></li>
+    <header id="header">
+        <div class="container nav-container">
+            <div class="logo">SP Soluções <span class="accent">.</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato" class="btn-nav">Contato</a></li>
                 </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <h1>Sua Casa, Mais Inteligente. Sua Vida, Mais Segura.</h1>
-            <p>Especialistas em automação residencial e sistemas de alarme de última geração.</p>
-            <a href="#servicos" class="btn-primary">Descubra Nossos Serviços</a>
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>SP Soluções Inteligentes:<br>O Futuro da Sua Casa Começa Agora.</h1>
+            <p>Transformamos lares em santuários de conforto, segurança e inovação com automação residencial personalizada.</p>
+            <a href="#contato" class="btn-primary">Transforme Seu Lar</a>
         </div>
     </section>
 
-    <section id="servicos" class="section-padding">
+    <section id="servicos" class="section">
         <div class="container">
-            <h2>Nossos Produtos e Serviços</h2>
-            <p class="section-subtitle">Tudo para transformar seu lar em um ambiente conectado e protegido.</p>
-            
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <h3>Alarmes Inteligentes</h3>
-                    <p>Instalação completa de sistemas de alarme controlados por app, com monitoramento em tempo real.</p>
-                </div>
-                <div class="servico-card">
+            <h2 class="section-title">O Que Fazemos</h2>
+            <div class="grid-servicos">
+                <div class="card-servico">
                     <h3>Automação de Iluminação</h3>
-                    <p>Controle lâmpadas por voz ou agendamento. Economia de energia e conforto.</p>
+                    <p>Crie ambientes perfeitos com um toque, economize energia e programe cenários que se adaptam à sua vida.</p>
                 </div>
-                <div class="servico-card">
-                    <h3>Controle de Energia e Clima</h3>
-                    <p>Automação de tomadas, ar condicionado e eletrodomésticos para total domínio da sua casa.</p>
+                <div class="card-servico">
+                    <h3>Controle de Clima e Energia</h3>
+                    <p>Conforto otimizado e economia inteligente. Gerencie sua temperatura e consumo com precisão.</p>
+                </div>
+                <div class="card-servico">
+                    <h3>Entretenimento Integrado</h3>
+                    <p>Experiências imersivas de áudio e vídeo na ponta dos seus dedos, com a simplicidade da automação.</p>
+                </div>
+                <div class="card-servico">
+                    <h3>Sistemas de Segurança Inteligente</h3>
+                    <p>Tranquilidade total para sua família. Monitoramento 24h, alarmes integrados e controle remoto.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sobre" class="section-padding dark-bg">
-        <div class="container">
-            <h2>Tecnologia e Confiança</h2>
-            <p>A  SP Soluções Inteligentes nasceu com o propósito de levar o futuro para dentro do seu lar. Nossa equipa é especializada e certificada nas tecnologias mais recentes do mercado, garantindo uma instalação segura e sem complicações.</p>
-            <p>Seja para segurança ou para o conforto da automação, a nossa missão é a sua satisfação.</p>
+    <section id="sobre" class="section bg-dark">
+        <div class="container split-layout">
+            <div class="text-content">
+                <h2 class="section-title light-text">Nossa Essência</h2>
+                <p>Na SP Soluções Inteligentes, não vendemos apenas tecnologia; transformamos vidas. Nascemos da paixão por criar lares que pulsam com a sua energia, que respondem às suas necessidades antes mesmo que você as perceba.</p>
+                <p>Acreditamos que a verdadeira inteligência de uma casa não está apenas em seus sistemas, mas na forma como ela abraça, protege e eleva a experiência de quem nela habita. Somos artesãos da conveniência, guardiões da segurança e arquitetos de um futuro onde seu lar é um reflexo perfeito do seu bem-estar.</p>
+                <p>Cada projeto é uma tela em branco onde pintamos o conforto, a paz e a inovação, garantindo que, ao final, você não tenha apenas uma casa inteligente, mas um lar com alma, feito sob medida para você.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1558002038-10914cba6023?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Conforto e Tecnologia">
+            </div>
         </div>
     </section>
 
-    <section id="contato" class="section-padding">
+    <section id="equipe" class="section">
+        <div class="container split-layout reverse">
+            <div class="text-content">
+                <h2 class="section-title">Equipe e Visão de Futuro</h2>
+                <p>Por trás de cada solução inovadora, existe um time que respira tecnologia e excelência. Na SP Soluções Inteligentes, investimos incansavelmente em nossos colaboradores. Não são apenas técnicos; são especialistas certificados, visionários e apaixonados.</p>
+                <p>Olhamos para o futuro com a certeza de que continuaremos a liderar o mercado, expandindo horizontes e trazendo as soluções mais avançadas e personalizadas. Somos uma família que constrói o futuro, um lar inteligente de cada vez.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a78e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Técnico Especialista">
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="section bg-gray">
         <div class="container">
-            <h2>Fale Conosco</h2>
-            <p class="section-subtitle">Transforme sua casa hoje mesmo. Entre em contato para um orçamento.</p>
-
-            <div class="contato-info">
-                <div class="info-item">
-                    <h3>Telefone</h3>
-                    <p><a href="tel:+5513992074922">(13) 99207-4922</a></p>
+            <h2 class="section-title">Histórias de Transformação</h2>
+            <div class="grid-depoimentos">
+                <div class="card-depoimento">
+                    <h4>"Mais que um Alarme, a Paz de Espírito de Volta!"</h4>
+                    <p>"Eles não entregaram um serviço, entregaram uma nova forma de viver! A paz de saber que meus filhos estão seguros não tem preço."</p>
+                    <cite>- Carla Mendes, Santos</cite>
                 </div>
-                <div class="info-item">
-                    <h3>E-mail</h3>
-                    <p><a href="mailto:spsolucoesinteligentes@gmail.com">spsolucoesinteligentes@gmail.com</a></p>
+                <div class="card-depoimento">
+                    <h4>"Minha Casa Entende Meus Desejos!"</h4>
+                    <p>"Desde que a SP Soluções Inteligentes automatizou minha casa, minha vida mudou. A comodidade de acender as luzes com a voz é incrível."</p>
+                    <cite>- Ricardo Silva, Praia Grande</cite>
+                </div>
+                <div class="card-depoimento">
+                    <h4>"Rotina Transformada, Tempo Ganhado!"</h4>
+                    <p>"A economia na conta de luz e o tempo que ganhei para o que realmente importa foram os maiores ganhos."</p>
+                    <cite>- Família Oliveira, Guarujá</cite>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section id="contato" class="section bg-dark">
+   
+                <div class="contact-info">
+                    <p><strong>Email:</strong> spsolucoesinteligentes@gmail.com</p>
+                    <p><strong>Telefone:</strong> (13) 99207-4922</p>
+                    <p><strong>Área de Atuação:</strong> Baixada Santista e Região</p>
+                </div>
             </div>
+        </div>
     </section>
 
     <footer>
@@ -88,6 +129,10 @@
             <p>&copy; 2023 SP Soluções Inteligentes. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <a href="https://wa.me/5513992074922?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20de%20automação%20residencial%20da%20SP%20Soluções%20Inteligentes." class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 
     <script src="script.js"></script>
 </body>
